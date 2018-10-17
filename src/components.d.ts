@@ -12,12 +12,8 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface CounterComponent {
-    'second': number;
-  }
-  interface CounterComponentAttributes extends StencilHTMLAttributes {
-    'second'?: number;
-  }
+  interface CounterComponent {}
+  interface CounterComponentAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
