@@ -12,40 +12,36 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    'first': string;
-    'last': string;
-    'middle': string;
+  interface CounterComponent {
+    'second': number;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    'first'?: string;
-    'last'?: string;
-    'middle'?: string;
+  interface CounterComponentAttributes extends StencilHTMLAttributes {
+    'second'?: number;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'CounterComponent': Components.CounterComponent;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'counter-component': Components.CounterComponentAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLCounterComponentElement extends Components.CounterComponent, HTMLStencilElement {}
+  var HTMLCounterComponentElement: {
+    prototype: HTMLCounterComponentElement;
+    new (): HTMLCounterComponentElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'counter-component': HTMLCounterComponentElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'counter-component': HTMLCounterComponentElement;
   }
 
 
